@@ -15,7 +15,7 @@ The available flags are the following:
 ## Example
 
 ~~~bash
-fusesoc --cores-root . run --no-export --target=sim --flag=use_posit32 --flag=use_quire --setup --build davidmallasen:ip:prau:0.0.1
-cd build/davidmallasen_ip_prau_0.0.1/sim-modelsim
+fusesoc --cores-root . run --no-export --target=sim --flag=use_posit32 --flag=use_quire --setup --build esl-epfl:ip:prau:0.0.1
+cd build/esl-epfl_ip_prau_0.0.1/sim-modelsim
 make run-gui
 ~~~
