@@ -48,6 +48,13 @@ module prau_top
   logic [XLEN-1:0] quire_result, comp_result, conv_result;
   poslen_t sgnj_result, pmv_result;
 
+  // Handshake signals
+  logic       input_hs;
+  logic       output_hs;
+
+  assign input_hs  = in_valid_i & in_ready_o;
+  assign output_hs = out_valid_o & out_ready_i;
+
   // ================
   // Quire operations
   // ================
@@ -159,13 +166,7 @@ module prau_top
   // =======
 
   logic       instr_in_flight;
-  logic       input_hs;
-  logic       output_hs;
   logic [3:0] latency_d, latency_q;
-
-  // Handshake signals
-  assign input_hs  = in_valid_i & in_ready_o;
-  assign output_hs = out_valid_o & out_ready_i;
 
   // Instruction in flight calculation
   // If both input_hs and output_hs are set, the input_hs has priority
