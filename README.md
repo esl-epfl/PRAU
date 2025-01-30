@@ -2,6 +2,8 @@
 
 PRAU started its journey as the Posit Arithmetic Unit (PAU) available in the [PERCIVAL](https://github.com/artecs-group/PERCIVAL) posit RISC-V core.
 
+![PRAU Diagram](docs/PRAU_diagram.drawio.svg)
+
 ## Posit configuration
 
 To configure the posit size, specify the appropiate flag when running FuseSoC, i.e. `--flag=use_posit32`.
